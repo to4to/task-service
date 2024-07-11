@@ -6,3 +6,13 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+actix-web="4"
+uuid = { version = "1.10.0", features = ["v4"] }
+serde = { version = "^1", features = ["derive"] }
+aws-config = "1.5.4"
+aws-sdk-dynamodb = "1.37.0"
+env_logger = "0.11.3"
+log = "^0.4"
+strum_macros = "0.26.4"
+strum = { version = "^0.26.3", features = ["derive"] }
+derive_more = "^0.99"
