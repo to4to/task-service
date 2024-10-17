@@ -1,5 +1,6 @@
 
 
+use actix_web::body;
 use::actix_web::{get,post,put,
     error::ResponseError
     ,web::Path,
@@ -11,3 +12,16 @@ use::actix_web::{get,post,put,
 
 use serde::{Serialize,Deserialize};
 use derive_more::{Display};
+
+
+#[derive(Serialize,Deserialize)]
+pub struct TaskIdentifier{
+    task_global_id:String,
+}
+
+
+#[get("/task/{task_global_id}")]
+pub async fn get_task(task_identifier:Path<TaskIdentifier>) ->Json<String>{
+    return Json(task_identifier.into_inner().task_global_id)
+    
+}
