@@ -11,10 +11,14 @@ git clone https://github.com/to4to/task-service.git
 ```
 
 ```
+cd task-service
+```
+```
 cargo build
 ```
 
 ```
 cargo run
 ```
+
 
